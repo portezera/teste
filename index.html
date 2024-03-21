@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    body{
+        background-color: bisque;
+    }
+    </style>
 </head>
 <body>
+<center>
+    <p><h1>manipulando DOM</h1></p>
+    <button id="btn" onclick="addChild()">adiconar texto</button>
+    <button id="btnremover" onclick="removerparagrafo()">remover</button>
 
-    <p>manipulando DOM</p>
-    <button id="btn">salvar</button>
-
+</center>
 </body>
 
 <script> 
-       let novoparagrafo = document.createElement('p')
-       novoparagrafo.textContent = 'manipulando DOM dinamicamente'   
+    function addChild() {
+       let novoparagrafo = document.createElement('p');
 
-       //adicionar paragrafo ao body
-       document.body.appendChild(novoparagrafo)
-       //remover o elemento paragrafo com removeChild
-       let paragrafo = document.querySelector('p')
-       paragrafo.parentElement.removeChild(paragrafo)
+       novoparagrafo.textContent = "natan"
 
-       let elemento = document.querySelector('p')
+       document.body.appendChild(novoparagrafo);
+       
+       }
+       function removerparagrafo() {
+
+        let removerparagrafo = document.querySelectorAll('p');
+
+        let ultimoparagrafo = removerparagrafo [removerparagrafo.length -1];
+
+        if(ultimoparagrafo) {
+            ultimoparagrafo.remove();
+        }
+
+       }
 
 </script>
 </html>
