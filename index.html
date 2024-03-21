@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
+    <p>manipulando DOM</p>
+    <button id="btn">salvar</button>
+
+</body>
+
+<script> 
+       let novoparagrafo = document.createElement('p')
+       novoparagrafo.textContent = 'manipulando DOM dinamicamente'   
+
+       //adicionar paragrafo ao body
+       document.body.appendChild(novoparagrafo)
+       //remover o elemento paragrafo com removeChild
+       let paragrafo = document.querySelector('p')
+       paragrafo.parentElement.removeChild(paragrafo)
+
+       let elemento = document.querySelector('p')
+
+</script>
+</html>
